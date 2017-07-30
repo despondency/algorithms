@@ -28,13 +28,13 @@ public class NaiveSuffixArrayTest {
 	}
 
 	@Test
-	public void testLCP(){
+	public void testLCP() {
 		String s = "mississippi";
 		NaiveSuffixArray naiveSuffixArray = new NaiveSuffixArray(s);
 		naiveSuffixArray.buildSA();
 		int[] actual = naiveSuffixArray.getLCP();
-		int[] expected = new int[]{1,1,4,0,0,1,0,2,1,3,0};
-		Assert.assertArrayEquals(expected,actual);
+		int[] expected = new int[]{1, 1, 4, 0, 0, 1, 0, 2, 1, 3, 0};
+		Assert.assertArrayEquals(expected, actual);
 	}
 
 	public boolean proofOfCorrectness(String str, String lrs) {

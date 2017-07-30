@@ -8,7 +8,7 @@ public class LongestCommonSubstringDPTest {
 		LongestCommonSubstringDP a = new LongestCommonSubstringDP("ababababad", "ab");
 		Assert.assertEquals(2, a.lcs());
 		LongestCommonSubstringDP b = new LongestCommonSubstringDP("ababab", "ababab");
-		Assert.assertEquals(6,b.lcs());
+		Assert.assertEquals(6, b.lcs());
 		LongestCommonSubstringDP c = new LongestCommonSubstringDP("rqwrq", "zzzz");
 		Assert.assertEquals(0, c.lcs());
 	}

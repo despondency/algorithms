@@ -16,8 +16,8 @@ public class QuickSort {
 		this.A = arr.toArray(new Integer[arr.size()]);
 	}
 
-	public void sort(){
-		sort(0, A.length-1);
+	public void sort() {
+		sort(0, A.length - 1);
 	}
 
 	private void swap(int i, int j) {
@@ -51,7 +51,7 @@ public class QuickSort {
 		sort(i, hi);
 	}
 
-	public Integer[] getSortedArray(){
+	public Integer[] getSortedArray() {
 		return A;
 	}
 }

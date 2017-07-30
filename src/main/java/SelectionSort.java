@@ -32,7 +32,7 @@ public class SelectionSort {
 		A[j] = tmp;
 	}
 
-	public int[] getSortedArray(){
+	public int[] getSortedArray() {
 		return A;
 	}
 }

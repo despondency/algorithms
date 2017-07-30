@@ -1,4 +1,5 @@
 import java.util.Arrays;
+
 // we don't need terminating sentinel '$' in this impl
 // complexity is O(N^2logN)
 public class NaiveSuffixArray {

@@ -31,10 +31,9 @@ public class TopologicalSort {
 				DFS(G.get(vertex).get(i));
 			}
 		}
-
 	}
 
-	public void topologicalSort(int vertex){
+	public void topologicalSort(int vertex) {
 
 	}
 
