@@ -2,11 +2,11 @@ import java.util.Vector;
 
 public class ConnectedComponents {
 
-	public Vector<Vector<Integer>> G;
-	public int V;
-	public boolean[] U;
-	public int[] id;
-	public int[] sz;
+	private Vector<Vector<Integer>> G;
+	private int V;
+	private boolean[] U;
+	private int[] id;
+	private int[] sz;
 
 	public ConnectedComponents(int V) {
 		this.V = V;
@@ -45,16 +45,6 @@ public class ConnectedComponents {
 		G.get(v).add(u);
 	}
 
-	public void printGraph() {
-		for (int i = 0; i < G.size(); i++) {
-			System.out.println("Vertex " + i + " children are ");
-			for (int j = 0; j < G.get(i).size(); j++) {
-				System.out.print(G.get(i).get(j) + " ");
-			}
-			System.out.println();
-		}
-	}
-
 	public void connectedComponents() {
 		int currentConnnectedComponent = 0;
 		for (int i = 0; i < G.size(); i++) {
@@ -64,30 +54,11 @@ public class ConnectedComponents {
 		}
 	}
 
-	public void printComponentAndSize() {
-		// same id -> same component
-		for (int i = 0; i < id.length; i++) {
-			System.out.print(id[i] + " ");
-		}
-		System.out.println();
-		// size of the component for each vertex
-		for (int i = 0; i < sz.length; i++) {
-			System.out.print(sz[i] + " ");
-		}
+	public int[] getComponents(){
+		return id;
 	}
 
-	public static void main(String[] args) {
-		ConnectedComponents graph = new ConnectedComponents(10);
-		graph.connect(0, 1);
-		graph.connect(2, 3);
-		graph.connect(3, 4);
-		graph.connect(5, 6);
-		graph.connect(6, 7);
-		graph.connect(7, 8);
-		graph.connectedComponents();
-		System.out.println(graph.isConnected(7, 8)); // true
-		System.out.println(graph.isConnected(9, 0)); // false
-		System.out.println(graph.isConnected(2, 4)); // transitively connected 2 -> 3 -> 4
-		graph.printComponentAndSize();
+	public int[] getSizeOfEachComponentForId(){
+		return sz;
 	}
 }
