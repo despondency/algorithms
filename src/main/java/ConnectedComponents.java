@@ -3,25 +3,24 @@ import java.util.Vector;
 public class ConnectedComponents {
 
 	public Vector<Vector<Integer>> G;
-	public int E;
+	public int V;
 	public boolean[] U;
 	public int[] id;
 	public int[] sz;
 
-	public ConnectedComponents(int E) {
-		this.E = E;
+	public ConnectedComponents(int V) {
+		this.V = V;
 		this.G = new Vector<>();
-		for (int i = 0; i < E; i++) {
+		for (int i = 0; i < V; i++) {
 			G.add(new Vector<>());
 		}
-		U = new boolean[E];
-		id = new int[E];
-		sz = new int[E];
+		U = new boolean[V];
+		id = new int[V];
+		sz = new int[V];
 	}
 
-	//this could be used if we need SSC/CC
 	public void resetUsed() {
-		U = new boolean[E];
+		U = new boolean[V];
 	}
 
 	public void DFS(int vertex, int currentComponent) {

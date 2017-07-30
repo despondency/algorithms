@@ -5,17 +5,17 @@ import java.util.Vector;
 public class BFS {
 
 	private Vector<Vector<Integer>> G;
-	private int E;
+	private int V;
 	private boolean[] U;
 	private boolean isDirected;
 
-	public BFS(int E, boolean isDirected) {
-		this.E = E;
+	public BFS(int V, boolean isDirected) {
+		this.V = V;
 		this.G = new Vector<>();
-		for (int i = 0; i < E; i++) {
+		for (int i = 0; i < V; i++) {
 			G.add(new Vector<>());
 		}
-		this.U = new boolean[E];
+		this.U = new boolean[V];
 		this.isDirected = isDirected;
 	}
 
