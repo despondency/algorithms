@@ -4,17 +4,17 @@ import java.util.Vector;
 public class TopologicalSort {
 
 	public Vector<Vector<Integer>> G;
-	public int E;
+	public int V;
 	public boolean[] U;
 	public Stack<Integer> topoSort;
 
-	public TopologicalSort(int E) {
-		this.E = E;
+	public TopologicalSort(int V) {
+		this.V = V;
 		this.G = new Vector<>();
-		for (int i = 0; i < E; i++) {
+		for (int i = 0; i < V; i++) {
 			G.add(new Vector<>());
 		}
-		this.U = new boolean[E];
+		this.U = new boolean[V];
 		this.topoSort = new Stack<>();
 	}
 	private void DFS(int vertex) {
