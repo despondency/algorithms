@@ -5,19 +5,18 @@ public class DFS {
 	private Vector<Vector<Integer>> G;
 	private int E;
 	private boolean[] U;
-
-	public DFS(int E) {
+	private boolean isDirected;
+	public DFS(int E, boolean isDirected) {
 		this.E = E;
 		this.G = new Vector<>();
 		for (int i = 0; i < E; i++) {
 			G.add(new Vector<>());
 		}
-		U = new boolean[E];
+		this.U = new boolean[E];
+		this.isDirected = isDirected;
 	}
 
 	public void DFS(int vertex) {
-		//currently explored vertex
-		//System.out.println(vertex);
 		U[vertex] = true;
 		for (int i = 0; i < G.get(vertex).size(); i++) {
 			if (!U[G.get(vertex).get(i)]) {
@@ -28,6 +27,8 @@ public class DFS {
 
 	public void connect(int u, int v) {
 		G.get(u).add(v);
-		G.get(v).add(u);
+		if(!isDirected) {
+			G.get(v).add(u);
+		}
 	}
 }

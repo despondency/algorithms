@@ -7,27 +7,26 @@ public class BFS {
 	private Vector<Vector<Integer>> G;
 	private int E;
 	private boolean[] U;
+	private boolean isDirected;
 
-	public BFS(int E) {
+	public BFS(int E, boolean isDirected) {
 		this.E = E;
 		this.G = new Vector<>();
 		for (int i = 0; i < E; i++) {
 			G.add(new Vector<>());
 		}
-		U = new boolean[E];
+		this.U = new boolean[E];
+		this.isDirected = isDirected;
 	}
 
 	public void BFS(int vertex) {
 		U[vertex] = true;
-		//System.out.println(vertex);
 		Queue<Integer> q = new LinkedList<>();
 		q.add(vertex);
 		while (!q.isEmpty()) {
 			Integer curr = q.poll();
 			for (Integer i : G.get(curr)) {
 				if (!U[i]) {
-					//currently explored vertex
-					//System.out.println(i);
 					q.add(i);
 					U[i] = true;
 				}
@@ -37,6 +36,8 @@ public class BFS {
 
 	public void connect(int u, int v) {
 		G.get(u).add(v);
-		G.get(v).add(u);
+		if(!isDirected) {
+			G.get(v).add(u);
+		}
 	}
 }
