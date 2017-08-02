@@ -1,4 +1,6 @@
 ![alt text](https://travis-ci.org/despondency/algorithms.svg?branch=master)
+
+
 This is an algorithms collection and is aimed to have one file per algorithm, no dependencies on other files for easier understanding. 
 
 **Search for algorithm implementation here and use Find File, to stay sane of packaging.**
