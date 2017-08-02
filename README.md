@@ -10,6 +10,8 @@ It's easy to make deeper abstractions if one wants to actually abstract an algor
 
 Currently implemented algorithms 
 
+**Algorithms without test are usually ones that will have to break the algorithm routine and add additional unneeded memory/complexity constraints to write a test. For instance : BFS, DFS.**
+
 | Algorithm                                | Test                                   | 
 | -----------------------------------------|:--------------------------------------:|
 | MergeSort                                |     YES                                |
@@ -21,7 +23,7 @@ Currently implemented algorithms
 | LevenshteinEditDistance                  |     YES                                |
 | LongestCommonSubstringDP                 |     YES                                |
 | NaiveSuffixArray                         |     YES                                |
-| BFS                                      | <span style="color:red">NO</span>      |
+| BFS                                      |     NO                                 |
 | DFS                                      |     NO                                 |
 | ConnectedComponents                      |     YES                                |
 | KosarajuSharir                           |     YES                                |
