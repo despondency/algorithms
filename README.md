@@ -12,7 +12,7 @@ Currently implemented algorithms
 
 | Algorithm                                | Test          | 
 | -----------------------------------------|:-------------:|
-| MergeSort                                |     YES       |
+| MergeSort                                |     [x]       |
 | QuickSort                                |     YES       |
 | SelectionSort                            |     YES       |
 | InsertionSort                            |     YES       |
