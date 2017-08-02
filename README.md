@@ -2,11 +2,7 @@ This is an algorithms collection and is aimed to have one file per algorithm, no
 
 **Search for algorithm implementation here and use Find File, to stay sane of packaging.**
 
-Some algorithms are buried into their own packages since i try to make all algorithms one file per algorithm, so Edge class for instance will be repeated in several algorithms, so every each one of these is subpackaged.
-
-Most algorithms will have their own tests in the test cases section.
-
-It's easy to make deeper abstractions if one wants to actually abstract an algorithm in a deep library
+Some algorithms are buried into their own packages since i try to make all algorithms one file per algorithm, so Edge class for instance will be repeated in several algorithms, so every each one of these is subpackaged because it's not allowed to have same class in different class files.
 
 Currently implemented algorithms 
 
