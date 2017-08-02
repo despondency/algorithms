@@ -8,26 +8,26 @@ Currently implemented algorithms
 
 **Algorithms without test are usually ones that will have to break the algorithm routine and add additional unneeded memory/complexity constraints to write a test. For instance : BFS, DFS.**
 
-| Algorithm                                | Test                                   | 
-| -----------------------------------------|:--------------------------------------:|
-| MergeSort                                |     YES                                |
-| QuickSort                                |     YES                                |
-| SelectionSort                            |     YES                                |
-| InsertionSort                            |     YES                                |
-| BubbleSort                               |     YES                                |
-| CountingSort                             |     YES                                |
-| LevenshteinEditDistance                  |     YES                                |
-| LongestCommonSubstringDP                 |     YES                                |
-| NaiveSuffixArray                         |     YES                                |
-| BFS                                      |     NO                                 |
-| DFS                                      |     NO                                 |
-| ConnectedComponents                      |     YES                                |
-| KosarajuSharir                           |     YES                                |
-| QuickFind                                |     YES                                |
-| WeightedQuickUnionFindPathCompression    |     YES                                |
-| Kruskal                                  |     YES                                |
-| Prim                                     |     YES                                |
-| TopologicalSort                          |     YES                                |
+|id  | Algorithm                                | Test                                   | 
+|----| -----------------------------------------|:--------------------------------------:|
+|1   | MergeSort                                |     YES                                |
+|2   | QuickSort                                |     YES                                |
+|3   | SelectionSort                            |     YES                                |
+|4   | InsertionSort                            |     YES                                |
+|5   | BubbleSort                               |     YES                                |
+|6   | CountingSort                             |     YES                                |
+|7   | LevenshteinEditDistance                  |     YES                                |
+|8   | LongestCommonSubstringDP                 |     YES                                |
+|9   | NaiveSuffixArray                         |     YES                                |
+|10  | BFS                                      |     NO                                 |
+|11  | DFS                                      |     NO                                 |
+|12  | ConnectedComponents                      |     YES                                |
+|13  | KosarajuSharir                           |     YES                                |
+|14  | QuickFind                                |     YES                                |
+|15  | WeightedQuickUnionFindPathCompression    |     YES                                |
+|16  | Kruskal                                  |     YES                                |
+|17  | Prim                                     |     YES                                |
+|18  | TopologicalSort                          |     YES                                |
 
                     
 ![alt text](https://travis-ci.org/despondency/algorithms.svg?branch=master)
