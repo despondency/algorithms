@@ -1,12 +1,17 @@
+package com.algorithms.graph.bfs;
+
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Vector;
 
-public class DFS {
+public class BFS {
 
 	private Vector<Vector<Integer>> G;
 	private int V;
 	private boolean[] U;
 	private boolean isDirected;
-	public DFS(int V, boolean isDirected) {
+
+	public BFS(int V, boolean isDirected) {
 		this.V = V;
 		this.G = new Vector<>();
 		for (int i = 0; i < V; i++) {
@@ -16,11 +21,17 @@ public class DFS {
 		this.isDirected = isDirected;
 	}
 
-	public void DFS(int vertex) {
+	public void BFS(int vertex) {
 		U[vertex] = true;
-		for (int i = 0; i < G.get(vertex).size(); i++) {
-			if (!U[G.get(vertex).get(i)]) {
-				DFS(G.get(vertex).get(i));
+		Queue<Integer> q = new LinkedList<>();
+		q.add(vertex);
+		while (!q.isEmpty()) {
+			Integer curr = q.poll();
+			for (Integer i : G.get(curr)) {
+				if (!U[i]) {
+					q.add(i);
+					U[i] = true;
+				}
 			}
 		}
 	}

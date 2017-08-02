@@ -1,3 +1,4 @@
+import com.algorithms.sort.QuickSort;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,3 +1,4 @@
+import com.algorithms.sort.MergeSort;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,3 +1,5 @@
+package com.algorithms.graph.components;
+
 import java.util.Vector;
 
 public class ConnectedComponents {

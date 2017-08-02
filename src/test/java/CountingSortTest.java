@@ -1,3 +1,4 @@
+import com.algorithms.sort.CountingSort;
 import org.junit.Assert;
 import org.junit.Test;
 

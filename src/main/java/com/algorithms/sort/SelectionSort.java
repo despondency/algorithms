@@ -1,3 +1,5 @@
+package com.algorithms.sort;
+
 // O(N^2) complexity O(N) exchanges
 public class SelectionSort {
 

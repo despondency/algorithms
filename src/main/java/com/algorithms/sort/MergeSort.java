@@ -1,3 +1,5 @@
+package com.algorithms.sort;
+
 // O(NlogN) complexity + O(N) space
 public class MergeSort {
 

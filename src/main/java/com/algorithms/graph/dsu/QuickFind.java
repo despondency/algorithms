@@ -1,3 +1,5 @@
+package com.algorithms.graph.dsu;
+
 public class QuickFind {
 
 	private int[] ids; // lookup

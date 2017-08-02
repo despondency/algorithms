@@ -1,4 +1,4 @@
-// complexity is
+package com.algorithms.graph.dsu;// complexity is
 // O(N) for initialization
 // O(lgN) for union
 // O(lgN) for connection query

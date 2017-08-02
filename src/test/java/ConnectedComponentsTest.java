@@ -1,3 +1,4 @@
+import com.algorithms.graph.components.ConnectedComponents;
 import org.junit.Assert;
 import org.junit.Test;
 

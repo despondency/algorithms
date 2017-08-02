@@ -1,3 +1,4 @@
+import com.algorithms.graph.components.KosarajuSharir;
 import org.junit.Test;
 
 public class KosarajuSharirTest {
