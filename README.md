@@ -8,9 +8,9 @@ It's easy to make deeper abstractions if one wants to actually abstract an algor
 
 Currently Implemented algorithms 
 
-| Algorithm            | Test           
-| ---------------------|:-------------:|
-| Merge Sort           |     YES       |
+| id | Algorithm            | Test           
+| -- | ---------------------|:-------------:|
+| 1. | Merge Sort           |     YES       |
 
 ![alt text](https://travis-ci.org/despondency/algorithms.svg?branch=master)
 
