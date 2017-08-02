@@ -10,26 +10,26 @@ It's easy to make deeper abstractions if one wants to actually abstract an algor
 
 Currently implemented algorithms 
 
-| Algorithm                                | Test          | 
-| -----------------------------------------|:-------------:|
-| MergeSort                                |     YES       |
-| QuickSort                                |     YES       |
-| SelectionSort                            |     YES       |
-| InsertionSort                            |     YES       |
-| BubbleSort                               |     YES       |
-| CountingSort                             |     YES       |
-| LevenshteinEditDistance                  |     YES       |
-| LongestCommonSubstringDP                 |     YES       |
-| NaiveSuffixArray                         |     YES       |
-| BFS                                      |     NO        |
-| DFS                                      |     NO        |
-| ConnectedComponents                      |     YES       |
-| KosarajuSharir                           |     YES       |
-| QuickFind                                |     YES       |
-| WeightedQuickUnionFindPathCompression    |     YES       |
-| Kruskal                                  |     YES       |
-| Prim                                     |     YES       |
-| TopologicalSort                          |     YES       |
+| Algorithm                                | Test                                   | 
+| -----------------------------------------|:--------------------------------------:|
+| MergeSort                                |     YES                                |
+| QuickSort                                |     YES                                |
+| SelectionSort                            |     YES                                |
+| InsertionSort                            |     YES                                |
+| BubbleSort                               |     YES                                |
+| CountingSort                             |     YES                                |
+| LevenshteinEditDistance                  |     YES                                |
+| LongestCommonSubstringDP                 |     YES                                |
+| NaiveSuffixArray                         |     YES                                |
+| BFS                                      | <span style="color:red"> NO  </span>   |
+| DFS                                      |     NO                                 |
+| ConnectedComponents                      |     YES                                |
+| KosarajuSharir                           |     YES                                |
+| QuickFind                                |     YES                                |
+| WeightedQuickUnionFindPathCompression    |     YES                                |
+| Kruskal                                  |     YES                                |
+| Prim                                     |     YES                                |
+| TopologicalSort                          |     YES                                |
 
                     
 ![alt text](https://travis-ci.org/despondency/algorithms.svg?branch=master)
