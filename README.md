@@ -10,10 +10,28 @@ It's easy to make deeper abstractions if one wants to actually abstract an algor
 
 Currently implemented algorithms 
 
-| Algorithm            | Test          | 
-| ---------------------|:-------------:|
-| Merge Sort           |     YES       |
+| Algorithm                                | Test          | 
+| -----------------------------------------|:-------------:|
+| MergeSort                                |     YES       |
+| QuickSort                                |     YES       |
+| SelectionSort                            |     YES       |
+| InsertionSort                            |     YES       |
+| BubbleSort                               |     YES       |
+| CountingSort                             |     YES       |
+| LevenshteinEditDistance                  |     YES       |
+| LongestCommonSubstringDP                 |     YES       |
+| NaiveSuffixArray                         |     YES       |
+| BFS                                      |     YES       |
+| DFS                                      |     YES       |
+| ConnectedComponents                      |     YES       |
+| KosarajuSharir                           |     YES       |
+| QuickFind                                |     YES       |
+| WeightedQuickUnionFindPathCompression    |     YES       |
+| Kruskal                                  |     YES       |
+| Prim                                     |     YES       |
+| TopologicalSort                          |     YES       |
 
+                    
 ![alt text](https://travis-ci.org/despondency/algorithms.svg?branch=master)
 
 
