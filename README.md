@@ -21,7 +21,7 @@ Currently implemented algorithms
 | LevenshteinEditDistance                  |     YES                                |
 | LongestCommonSubstringDP                 |     YES                                |
 | NaiveSuffixArray                         |     YES                                |
-| BFS                                      | <span style="color:red"> NO  </span>   |
+| BFS                                      | <span style="color:red">NO</span>      |
 | DFS                                      |     NO                                 |
 | ConnectedComponents                      |     YES                                |
 | KosarajuSharir                           |     YES                                |
