@@ -1,3 +1,5 @@
+package com.algorithms;
+
 import java.util.Arrays;
 
 // we don't need terminating sentinel '$' in this impl
