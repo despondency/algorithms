@@ -31,5 +31,5 @@ Currently implemented algorithms
 |16  | Kruskal                                  |     YES                                |
 |17  | Prim                                     |     YES                                |
 |18  | TopologicalSort                          |     YES                                |
-
+|19  | Boruvka                                  |     YES                                |
 
