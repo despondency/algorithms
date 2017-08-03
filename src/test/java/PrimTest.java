@@ -23,6 +23,6 @@ public class PrimTest {
 		prim.addEdge(4, 7, 12);
 		prim.addEdge(4, 6, 32);
 		prim.addEdge(5, 7, 11);
-		Assert.assertEquals(26,prim.MST());
+		Assert.assertEquals(26, prim.MST());
 	}
 }

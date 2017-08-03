@@ -2,23 +2,18 @@ package com.algorithms.graph.mst.kruskal;
 
 import java.util.*;
 
-class Edge
-{
-	int u;
-	int v;
-	int dist;
-	public Edge(int u, int v, int dist){
-		this.u = u;
-		this.v = v;
-		this.dist = dist;
-	}
-
-	public static Edge createEdge(int u, int v, int dist){
-		return new Edge(u,v,dist);
-	}
-}
-
 public class Kruskal {
+	public class Edge
+	{
+		int u;
+		int v;
+		int dist;
+		public Edge(int u, int v, int dist){
+			this.u = u;
+			this.v = v;
+			this.dist = dist;
+		}
+	}
 	private Vector<Edge> G;
 	private List<Edge> mstEdges;
 	private int V;
@@ -40,7 +35,7 @@ public class Kruskal {
 	}
 
 	public void addEdge(int u, int v, int dist){
-		G.add(Edge.createEdge(u,v,dist));
+		G.add(new Edge(u,v,dist));
 		//G.add(Edge.createEdge(v,u,dist)); // don't
 	}
 
