@@ -24,12 +24,13 @@ public class BinarySearch {
 	}
 
 	//returns first element bigger than the searched element if its not found
+	// if there is no bigger element it returns array.length + 1 indx out of the array
 	public int lowerBound(int n){
 		int hi = A.length; int lo = 0;
 		while ( hi > lo ){
 			int mid = lo + ((hi-lo)/2);
 			if(A[mid] >= n){
-				hi= mid;
+				hi = mid;
 			}
 			else{
 				lo = mid + 1;
@@ -38,6 +39,7 @@ public class BinarySearch {
 		return lo;
 	}
 	// returns first bigger element than the one that is being searched for
+	// if there is no bigger element it returns array.length + 1 indx out of the array
 	public int upperBound(int n){
 		int hi = A.length; int lo = 0;
 		while ( hi > lo ){

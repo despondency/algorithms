@@ -15,6 +15,11 @@ public class BinarySearchTest {
 			Assert.assertEquals(2,binarySearch.equalBound(4));
 			Assert.assertEquals(9,binarySearch.lowerBound(235));
 			Assert.assertEquals(7,binarySearch.lowerBound(55));
+
+			//1231231265 is in the array, if we use it its gonna be found, if we use higher value we are going to get pointer out of the array
+			Assert.assertEquals(10,binarySearch.lowerBound(1231231267)); // there is no such element so we return index out of the array
+
+			//1231231265 we look for element that is strongly > of 1231231265
 			Assert.assertEquals(10,binarySearch.upperBound(1231231265)); // theres no bigger el -> 10th index is index out of the array
 		}
 }
