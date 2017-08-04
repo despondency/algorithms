@@ -13,6 +13,16 @@ public class BinarySearchTest {
 			Arrays.sort(A);
 			BinarySearch binarySearch = new BinarySearch(A);
 			Assert.assertEquals(2,binarySearch.equalBound(4));
+			Assert.assertEquals(0,binarySearch.equalBound(1));
+			Assert.assertEquals(9,binarySearch.equalBound(1231231265));
+			Assert.assertEquals(6,binarySearch.equalBound(53));
+			Assert.assertEquals(1,binarySearch.equalBound(3));
+			Assert.assertEquals(3,binarySearch.equalBound(6));
+			Assert.assertEquals(4,binarySearch.equalBound(7));
+			Assert.assertEquals(5,binarySearch.equalBound(24));
+			Assert.assertEquals(7,binarySearch.equalBound(124));
+			Assert.assertEquals(8,binarySearch.equalBound(234));
+
 			Assert.assertEquals(9,binarySearch.lowerBound(235));
 			Assert.assertEquals(7,binarySearch.lowerBound(55));
 
