@@ -13,7 +13,7 @@ Currently implemented algorithms
 
 |id  | Algorithm                                                     | Test                                   | 
 |----| --------------------------------------------------------------|:--------------------------------------:|
-|1   | [MergeSort]https://github.com/despondency/algorithms/blob/master/src/main/java/com/algorithms/sort/MergeSort.java                                                   |     YES                                |
+|1   | MergeSort                                                     |     YES                                |
 |2   | QuickSort                                                     |     YES                                |
 |3   | SelectionSort                                                 |     YES                                |
 |4   | InsertionSort                                                 |     YES                                |
