@@ -58,20 +58,20 @@ public class Dijkstra {
 		pq.offer(new Pair(0, S));
 		dist[S] = 0;
 		while (!pq.isEmpty()) {
-			Pair edge = pq.poll();
+			Pair vertex = pq.poll();
 
 			// important remark here is as follows :
 			// since we do not actually delete the edges with longer distance from the PQ that start from the same vertex
 			// we must be sure that the current edge we are processing has the minimum distance
 			// this method is called lazy deletion
-			if (edge.dist > dist[edge.to]) {
+			if (vertex.dist > dist[vertex.to]) {
 				continue;
 			}
 
-			Vector<Edge> outgoingEdges = edges.get(edge.to);
+			Vector<Edge> outgoingEdges = edges.get(vertex.to);
 			for (Edge outgoing : outgoingEdges) {
-				if (dist[edge.to] + outgoing.dist < dist[outgoing.v]) {
-					dist[outgoing.v] = dist[edge.to] + outgoing.dist;
+				if (dist[vertex.to] + outgoing.dist < dist[outgoing.v]) {
+					dist[outgoing.v] = dist[vertex.to] + outgoing.dist;
 					pq.offer(new Pair(dist[outgoing.v], outgoing.v));
 				}
 			}
