@@ -19,6 +19,7 @@ public class TopologicalSort {
 		this.U = new boolean[V];
 		this.topoSort = new Stack<>();
 	}
+
 	private void DFS(int vertex) {
 		U[vertex] = true;
 		for (int i = 0; i < G.get(vertex).size(); i++) {
@@ -28,23 +29,26 @@ public class TopologicalSort {
 		}
 		topoSort.push(vertex);
 	}
+
 	public void topologicalSort() {
-		for (int i = 0; i < G.size(); i++){
-			if(!U[i]){
+		for (int i = 0; i < G.size(); i++) {
+			if (!U[i]) {
 				DFS(i);
 			}
 		}
 	}
-	public int[] getTopologicalSort(){
+
+	public int[] getTopologicalSort() {
 		int sort[] = new int[topoSort.size()];
 		int i = 0;
-		while(!topoSort.isEmpty()){
-			sort[i]= topoSort.peek();
+		while (!topoSort.isEmpty()) {
+			sort[i] = topoSort.peek();
 			topoSort.pop();
 			i++;
 		}
 		return sort;
 	}
+
 	public void connect(int u, int v) {
 		G.get(u).add(v);
 	}

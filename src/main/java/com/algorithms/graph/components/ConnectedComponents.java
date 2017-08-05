@@ -56,11 +56,11 @@ public class ConnectedComponents {
 		}
 	}
 
-	public int[] getComponents(){
+	public int[] getComponents() {
 		return id;
 	}
 
-	public int[] getSizeOfEachComponentForId(){
+	public int[] getSizeOfEachComponentForId() {
 		return sz;
 	}
 }

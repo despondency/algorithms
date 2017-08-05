@@ -3,6 +3,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class CountingSortTest {
+
 	@Test
 	public void testCountingSort() {
 		CountingSort countingSort = new CountingSort(new int[]{63, 2, 1, 423, 54, 62, 1, 87});

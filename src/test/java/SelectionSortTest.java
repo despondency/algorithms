@@ -1,9 +1,9 @@
-import com.algorithms.sort.QuickSort;
 import com.algorithms.sort.SelectionSort;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class SelectionSortTest {
+
 	@Test
 	public void testSelectionSort() {
 		SelectionSort selectionSort = new SelectionSort(new int[]{63, 2, 1, 423, 54, 62, 1, 87});

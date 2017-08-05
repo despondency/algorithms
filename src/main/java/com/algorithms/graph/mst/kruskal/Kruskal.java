@@ -3,17 +3,20 @@ package com.algorithms.graph.mst.kruskal;
 import java.util.*;
 
 public class Kruskal {
-	public class Edge
-	{
+
+	public class Edge {
+
 		int u;
 		int v;
 		int dist;
-		public Edge(int u, int v, int dist){
+
+		public Edge(int u, int v, int dist) {
 			this.u = u;
 			this.v = v;
 			this.dist = dist;
 		}
 	}
+
 	private Vector<Edge> G;
 	private List<Edge> mstEdges;
 	private int V;
@@ -34,8 +37,8 @@ public class Kruskal {
 		this.mstEdges = new ArrayList<>();
 	}
 
-	public void addEdge(int u, int v, int dist){
-		G.add(new Edge(u,v,dist));
+	public void addEdge(int u, int v, int dist) {
+		G.add(new Edge(u, v, dist));
 		//G.add(Edge.createEdge(v,u,dist)); // don't
 	}
 
@@ -51,7 +54,7 @@ public class Kruskal {
 		return i;
 	}
 
-	public List<Edge> mstEdges(){
+	public List<Edge> mstEdges() {
 		return mstEdges;
 	}
 
@@ -62,18 +65,20 @@ public class Kruskal {
 			return;
 		}
 		if (depth[i] < depth[j]) {
-			UF[i] = j; depth[j] += depth[i];
+			UF[i] = j;
+			depth[j] += depth[i];
 		}
 		else {
-			UF[j] = i; depth[i] += depth[j];
+			UF[j] = i;
+			depth[i] += depth[j];
 		}
 		components--;
 	}
 
-	public int MST(){
+	public int MST() {
 		int mst = 0;
 		PriorityQueue<Edge> pq = new PriorityQueue<>(Comparator.comparingInt(e -> e.dist));
-		for (Edge e : G){
+		for (Edge e : G) {
 			pq.add(e);
 		}
 		while (!pq.isEmpty() && mstEdges.size() < V - 1) {
@@ -86,8 +91,4 @@ public class Kruskal {
 		}
 		return mst;
 	}
-
-
-
-
 }

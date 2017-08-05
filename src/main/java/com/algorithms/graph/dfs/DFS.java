@@ -8,6 +8,7 @@ public class DFS {
 	private int V;
 	private boolean[] U;
 	private boolean isDirected;
+
 	public DFS(int V, boolean isDirected) {
 		this.V = V;
 		this.G = new Vector<>();
@@ -29,7 +30,7 @@ public class DFS {
 
 	public void connect(int u, int v) {
 		G.get(u).add(v);
-		if(!isDirected) {
+		if (!isDirected) {
 			G.get(v).add(u);
 		}
 	}

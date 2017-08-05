@@ -4,10 +4,11 @@ import java.util.Stack;
 import java.util.Vector;
 
 public class KosarajuSharir {
+
 	private Vector<Vector<Integer>> G;
 	private Vector<Vector<Integer>> reverseG;
 	private Stack<Integer> topologicalSort;
- 	private int V;
+	private int V;
 	private boolean[] U;
 	private int[] id;
 	private int[] sz;
@@ -43,21 +44,21 @@ public class KosarajuSharir {
 		}
 	}
 
-	public void SCC(){
+	public void SCC() {
 		topologicalSort();
 		resetUsed();
 		int currentComponent = 0;
-		while (!topologicalSort.isEmpty()){
+		while (!topologicalSort.isEmpty()) {
 			int explore = topologicalSort.peek();
 			topologicalSort.pop();
-			if(!U[explore]){
-				DFS(explore,currentComponent);
+			if (!U[explore]) {
+				DFS(explore, currentComponent);
 			}
 			currentComponent++;
 		}
 	}
 
-	private void topologicalSortDFS(int vertex){
+	private void topologicalSortDFS(int vertex) {
 		U[vertex] = true;
 		for (int i = 0; i < reverseG.get(vertex).size(); i++) {
 			if (!U[reverseG.get(vertex).get(i)]) {
@@ -67,9 +68,9 @@ public class KosarajuSharir {
 		topologicalSort.add(vertex);
 	}
 
-	private void topologicalSort(){
-		for (int i = 0; i < reverseG.size();i++){
-			if(!U[i]){
+	private void topologicalSort() {
+		for (int i = 0; i < reverseG.size(); i++) {
+			if (!U[i]) {
 				topologicalSortDFS(i);
 			}
 		}
@@ -85,11 +86,11 @@ public class KosarajuSharir {
 		reverseG.get(v).add(u);
 	}
 
-	public int[] getComponents(){
+	public int[] getComponents() {
 		return id;
 	}
 
-	public int[] getSizeOfEachComponentForId(){
+	public int[] getSizeOfEachComponentForId() {
 		return sz;
 	}
 }

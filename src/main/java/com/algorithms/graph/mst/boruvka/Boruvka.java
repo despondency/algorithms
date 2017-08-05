@@ -73,27 +73,30 @@ public class Boruvka {
 	public int MST() {
 		int mst = 0;
 
-		for (int i = 1; i < V && mstEdges.size() < V - 1 ; i += i){
+		for (int i = 1; i < V && mstEdges.size() < V - 1; i += i) {
 			Edge bestDist[] = new Edge[V];
-			for(Edge e : G){
-				int u = e.u; int v = e.v;
+			for (Edge e : G) {
+				int u = e.u;
+				int v = e.v;
 				int rootU = root(u);
 				int rootV = root(v);
-				if(rootU == rootV) continue;
-				if(bestDist[rootU] == null || bestDist[rootU].dist > e.dist){
+				if (rootU == rootV) {
+					continue;
+				}
+				if (bestDist[rootU] == null || bestDist[rootU].dist > e.dist) {
 					bestDist[rootU] = e;
 				}
-				if(bestDist[rootV] == null || bestDist[rootV].dist > e.dist){
+				if (bestDist[rootV] == null || bestDist[rootV].dist > e.dist) {
 					bestDist[rootV] = e;
 				}
 			}
-			for(int w = 0; w < V;w++){
+			for (int w = 0; w < V; w++) {
 				Edge cur = bestDist[w];
-				if(cur != null){
-					if(!isConnected(cur.u,cur.v)){
+				if (cur != null) {
+					if (!isConnected(cur.u, cur.v)) {
 						mstEdges.add(cur);
-						mst+=cur.dist;
-						union(cur.u,cur.v);
+						mst += cur.dist;
+						union(cur.u, cur.v);
 					}
 				}
 			}
