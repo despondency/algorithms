@@ -11,6 +11,7 @@ Some algorithms are buried into their own packages since i try to make all algor
 
 Currently implemented algorithms 
 
+<<<<<<< HEAD
 |id  | Algorithm                                | Test                                   | 
 |----| -----------------------------------------|:--------------------------------------:|
 |1   | MergeSort                                |     YES                                |
@@ -19,9 +20,9 @@ Currently implemented algorithms
 |4   | InsertionSort                            |     YES                                |
 |5   | BubbleSort                               |     YES                                |
 |6   | CountingSort                             |     YES                                |
-|7   | com.algorithms.string.LevenshteinEditDistance                  |     YES                                |
-|8   | com.algorithms.string.LongestCommonSubstringDP                 |     YES                                |
-|9   | com.algorithms.string.NaiveSuffixArray                         |     YES                                |
+|7   | LevenshteinEditDistance                  |     YES                                |
+|8   | LongestCommonSubstringDP                 |     YES                                |
+|9   | NaiveSuffixArray                         |     YES                                |
 |10  | BFS                                      |     NO                                 |
 |11  | DFS                                      |     NO                                 |
 |12  | ConnectedComponents                      |     YES                                |
@@ -32,4 +33,4 @@ Currently implemented algorithms
 |17  | Prim                                     |     YES                                |
 |18  | TopologicalSort                          |     YES                                |
 |19  | Boruvka                                  |     YES                                |
-
+|20  | Dijkstra                                 |     YES                                |
