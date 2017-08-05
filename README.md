@@ -11,25 +11,26 @@ Some algorithms are buried into their own packages since i try to make all algor
 
 Currently implemented algorithms 
 
-|id  | Algorithm                                | Test                                   | 
-|----| -----------------------------------------|:--------------------------------------:|
-|1   | MergeSort                                |     YES                                |
-|2   | QuickSort                                |     YES                                |
-|3   | SelectionSort                            |     YES                                |
-|4   | InsertionSort                            |     YES                                |
-|5   | BubbleSort                               |     YES                                |
-|6   | CountingSort                             |     YES                                |
-|7   | com.algorithms.LevenshteinEditDistance                  |     YES                                |
-|8   | com.algorithms.LongestCommonSubstringDP                 |     YES                                |
-|9   | com.algorithms.NaiveSuffixArray                         |     YES                                |
-|10  | BFS                                      |     NO                                 |
-|11  | DFS                                      |     NO                                 |
-|12  | ConnectedComponents                      |     YES                                |
-|13  | KosarajuSharir                           |     YES                                |
-|14  | QuickFind                                |     YES                                |
-|15  | WeightedQuickUnionFindPathCompression    |     YES                                |
-|16  | Kruskal                                  |     YES                                |
-|17  | Prim                                     |     YES                                |
-|18  | TopologicalSort                          |     YES                                |
-|19  | Boruvka                                  |     YES                                |
-
+|id  | Algorithm                                                     | Test                                   | 
+|----| --------------------------------------------------------------|:--------------------------------------:|
+|1   | [MergeSort]https://github.com/despondency/algorithms/blob/master/src/main/java/com/algorithms/sort/MergeSort.java                                                   |     YES                                |
+|2   | QuickSort                                                     |     YES                                |
+|3   | SelectionSort                                                 |     YES                                |
+|4   | InsertionSort                                                 |     YES                                |
+|5   | BubbleSort                                                    |     YES                                |
+|6   | CountingSort                                                  |     YES                                |
+|7   | LevenshteinEditDistance                                       |     YES                                |
+|8   | LongestCommonSubstringDP                                      |     YES                                |
+|9   | NaiveSuffixArray                                              |     YES                                |
+|10  | BFS                                                           |     NO                                 |
+|11  | DFS                                                           |     NO                                 |
+|12  | ConnectedComponents                                           |     YES                                |
+|13  | KosarajuSharir                                                |     YES                                |
+|14  | QuickFind                                                     |     YES                                |
+|15  | WeightedQuickUnionFindPathCompression                         |     YES                                |
+|16  | Kruskal                                                       |     YES                                |
+|17  | Prim                                                          |     YES                                |
+|18  | TopologicalSort                                               |     YES                                |
+|19  | Boruvka                                                       |     YES                                |
+                     
+                     
