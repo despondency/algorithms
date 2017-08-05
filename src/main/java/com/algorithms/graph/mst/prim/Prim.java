@@ -41,7 +41,7 @@ public class Prim {
 		M[vertex] = true;
 		for (Edge e : G.get(vertex)) {
 			if (!M[e.v]) {
-				pq.add(e);
+				pq.offer(e);
 			}
 		}
 	}

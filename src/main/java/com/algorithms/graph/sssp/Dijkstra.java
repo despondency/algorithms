@@ -55,7 +55,7 @@ public class Dijkstra {
 
 	public int[] shortestPath() {
 		PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(e -> e.dist));
-		pq.add(new Pair(0, S));
+		pq.offer(new Pair(0, S));
 		dist[S] = 0;
 		while (!pq.isEmpty()) {
 			Pair edge = pq.poll();

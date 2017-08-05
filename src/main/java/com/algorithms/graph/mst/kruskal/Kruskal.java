@@ -79,7 +79,7 @@ public class Kruskal {
 		int mst = 0;
 		PriorityQueue<Edge> pq = new PriorityQueue<>(Comparator.comparingInt(e -> e.dist));
 		for (Edge e : G) {
-			pq.add(e);
+			pq.offer(e);
 		}
 		while (!pq.isEmpty() && mstEdges.size() < V - 1) {
 			Edge currentEdge = pq.poll();
