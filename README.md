@@ -11,7 +11,7 @@ Some algorithms are buried into their own packages since i try to make all algor
 
 Currently implemented algorithms 
 
-<<<<<<< HEAD
+
 |id  | Algorithm                                | Test                                   | 
 |----| -----------------------------------------|:--------------------------------------:|
 |1   | MergeSort                                |     YES                                |
