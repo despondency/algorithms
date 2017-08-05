@@ -1,4 +1,4 @@
-import com.algorithms.LongestCommonSubstringDP;
+import com.algorithms.string.LongestCommonSubstringDP;
 import org.junit.Assert;
 import org.junit.Test;
 

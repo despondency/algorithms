@@ -1,4 +1,4 @@
-import com.algorithms.NaiveSuffixArray;
+import com.algorithms.string.NaiveSuffixArray;
 import org.junit.Assert;
 import org.junit.Test;
 

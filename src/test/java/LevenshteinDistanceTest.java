@@ -1,4 +1,4 @@
-import com.algorithms.LevenshteinEditDistance;
+import com.algorithms.string.LevenshteinEditDistance;
 import org.junit.Assert;
 import org.junit.Test;
 

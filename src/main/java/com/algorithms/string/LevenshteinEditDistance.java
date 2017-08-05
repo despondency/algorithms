@@ -1,4 +1,4 @@
-package com.algorithms;
+package com.algorithms.string;
 
 // complexity is
 // O( len(a) * len(b))

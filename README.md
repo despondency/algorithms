@@ -19,9 +19,9 @@ Currently implemented algorithms
 |4   | InsertionSort                            |     YES                                |
 |5   | BubbleSort                               |     YES                                |
 |6   | CountingSort                             |     YES                                |
-|7   | com.algorithms.LevenshteinEditDistance                  |     YES                                |
-|8   | com.algorithms.LongestCommonSubstringDP                 |     YES                                |
-|9   | com.algorithms.NaiveSuffixArray                         |     YES                                |
+|7   | com.algorithms.string.LevenshteinEditDistance                  |     YES                                |
+|8   | com.algorithms.string.LongestCommonSubstringDP                 |     YES                                |
+|9   | com.algorithms.string.NaiveSuffixArray                         |     YES                                |
 |10  | BFS                                      |     NO                                 |
 |11  | DFS                                      |     NO                                 |
 |12  | ConnectedComponents                      |     YES                                |

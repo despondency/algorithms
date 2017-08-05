@@ -1,4 +1,4 @@
-import com.algorithms.BinarySearch;
+import com.algorithms.search.BinarySearch;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,14 +14,41 @@ public class BinarySearchTest {
 			BinarySearch binarySearch = new BinarySearch(A);
 			Assert.assertEquals(2,binarySearch.equalBound(4));
 			Assert.assertEquals(0,binarySearch.equalBound(1));
-			Assert.assertEquals(9,binarySearch.equalBound(1231231265));
 			Assert.assertEquals(6,binarySearch.equalBound(53));
-			Assert.assertEquals(1,binarySearch.equalBound(3));
 			Assert.assertEquals(3,binarySearch.equalBound(6));
-			Assert.assertEquals(4,binarySearch.equalBound(7));
-			Assert.assertEquals(5,binarySearch.equalBound(24));
+			Assert.assertEquals(1,binarySearch.equalBound(3));
 			Assert.assertEquals(7,binarySearch.equalBound(124));
+			Assert.assertEquals(4,binarySearch.equalBound(7));
 			Assert.assertEquals(8,binarySearch.equalBound(234));
+			Assert.assertEquals(5,binarySearch.equalBound(24));
+			Assert.assertEquals(9,binarySearch.equalBound(1231231265));
+
+			Assert.assertEquals(0,binarySearch.lowerBound(0)); // there is no 0 so we get 0th index as bigger (1)
+			Assert.assertEquals(1,binarySearch.lowerBound(2)); // there is no 2 so we get 1st index as bigger (3)
+			Assert.assertEquals(1,binarySearch.lowerBound(3));
+			Assert.assertEquals(2,binarySearch.lowerBound(4));
+			Assert.assertEquals(3,binarySearch.lowerBound(5));
+			Assert.assertEquals(3,binarySearch.lowerBound(6));
+			Assert.assertEquals(4,binarySearch.lowerBound(7));
+			// 7 -> 24
+			Assert.assertEquals(4,binarySearch.lowerBound(7));
+			Assert.assertEquals(5,binarySearch.lowerBound(8));
+			Assert.assertEquals(5,binarySearch.lowerBound(9));
+			Assert.assertEquals(5,binarySearch.lowerBound(10));
+			Assert.assertEquals(5,binarySearch.lowerBound(11));
+			Assert.assertEquals(5,binarySearch.lowerBound(12));
+			Assert.assertEquals(5,binarySearch.lowerBound(13));
+			Assert.assertEquals(5,binarySearch.lowerBound(14));
+			Assert.assertEquals(5,binarySearch.lowerBound(15));
+			Assert.assertEquals(5,binarySearch.lowerBound(16));
+			Assert.assertEquals(5,binarySearch.lowerBound(17));
+			Assert.assertEquals(5,binarySearch.lowerBound(18));
+			Assert.assertEquals(5,binarySearch.lowerBound(19));
+			Assert.assertEquals(5,binarySearch.lowerBound(20));
+			Assert.assertEquals(5,binarySearch.lowerBound(21));
+			Assert.assertEquals(5,binarySearch.lowerBound(22));
+			Assert.assertEquals(5,binarySearch.lowerBound(23));
+			Assert.assertEquals(5,binarySearch.lowerBound(24));
 
 			Assert.assertEquals(9,binarySearch.lowerBound(235));
 			Assert.assertEquals(7,binarySearch.lowerBound(55));
@@ -31,5 +58,6 @@ public class BinarySearchTest {
 
 			//1231231265 we look for element that is strongly > of 1231231265
 			Assert.assertEquals(10,binarySearch.upperBound(1231231265)); // theres no bigger el -> 10th index is index out of the array
+			Assert.assertEquals(0,binarySearch.upperBound(0));
 		}
 }
