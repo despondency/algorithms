@@ -34,4 +34,5 @@ Currently implemented algorithms
 |18  | TopologicalSort                          |     YES                                |
 |19  | Boruvka                                  |     YES                                |
 |20  | Dijkstra                                 |     YES                                |
-|21  | BellmanFord                              |     YES                                |
+|21  | DAGShortestPaths                         |     YES                                |
+|22  | BellmanFord                              |     YES                                |

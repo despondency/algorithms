@@ -21,18 +21,23 @@ public class BellmanFord {
 	private Vector<Vector<Edge> > G;
 	private int S;
 	private static final int INF = 1000000000;
+	private final boolean isDirected;
 
-	public BellmanFord(int V, int S) {
+	public BellmanFord(int V, int S, boolean isDirected) {
 		this.V = V;
 		this.S = S;
 		this.G = new Vector<>();
 		for(int i = 0;i < V;i++){
 			G.add(new Vector<>());
 		}
+		this.isDirected = isDirected;
 	}
 
 	public void connect(int u, int v, int dist){
 		G.get(u).add(new Edge(u,v,dist));
+		if(!isDirected){
+			G.get(v).add(new Edge(v,u,dist));
+		}
 	}
 
 	public int[] shortestPaths() throws Exception{
