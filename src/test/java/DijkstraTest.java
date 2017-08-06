@@ -6,7 +6,7 @@ public class DijkstraTest {
 
 	@Test
 	public void testDijkstraSSSP() {
-		Dijkstra dijkstra = new Dijkstra(8, 0);
+		Dijkstra dijkstra = new Dijkstra(8, 0, true);
 		dijkstra.connect(0, 1, 5);
 		dijkstra.connect(0, 7, 8);
 		dijkstra.connect(0, 4, 9);

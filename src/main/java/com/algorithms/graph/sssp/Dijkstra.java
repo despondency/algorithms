@@ -35,8 +35,9 @@ public class Dijkstra {
 	private static final int INF = 1000000000;
 	private int S;
 	private int V;
+	private boolean isDirected;
 
-	public Dijkstra(int V, int S) {
+	public Dijkstra(int V, int S, boolean isDirected) {
 		this.S = S;
 		this.V = V;
 		this.edges = new Vector<>();
@@ -47,10 +48,14 @@ public class Dijkstra {
 		for (int i = 0; i < V; i++) {
 			dist[i] = INF;
 		}
+		this.isDirected = isDirected;
 	}
 
 	public void connect(int u, int v, int dist) {
 		edges.get(u).add(new Edge(u, v, dist));
+		if(!isDirected){
+			edges.get(v).add(new Edge(v,u, dist));
+		}
 	}
 
 	public int[] shortestPath() {
