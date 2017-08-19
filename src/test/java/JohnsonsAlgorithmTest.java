@@ -27,4 +27,18 @@ public class JohnsonsAlgorithmTest {
 		johnsonsAlgorithm.johnsonsAlgorithm();
 	}
 
+	@Test
+	public void testJohnsonsAlgorithmASPS3() throws Exception{
+		JohnsonsAlgorithm johnsonsAlgorithm = new JohnsonsAlgorithm(4, true);
+		johnsonsAlgorithm.connect(0,2,-2);
+		johnsonsAlgorithm.connect(1,2,3);
+		johnsonsAlgorithm.connect(1,0,4);
+		johnsonsAlgorithm.connect(2,3,2);
+		johnsonsAlgorithm.connect(3,1,-1);
+
+		johnsonsAlgorithm.johnsonsAlgorithm();
+	}
+
+
+
 }

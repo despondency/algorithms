@@ -1,8 +1,5 @@
 package com.algorithms.graph.apsp;
 
-import javafx.scene.layout.Priority;
-
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Vector;
@@ -38,24 +35,24 @@ public class JohnsonsAlgorithm {
 	private boolean isDirected;
 	private static final int INF = 1000000000;
 
-	public JohnsonsAlgorithm(int V, boolean isDirected){
+	public JohnsonsAlgorithm(int V, boolean isDirected) {
 		this.isDirected = isDirected;
 		this.V = V;
 		this.G = new Vector<>();
-		for(int i = 0;i<V;i++){
+		for (int i = 0; i < V; i++) {
 			G.add(new Vector<>());
 		}
 		G.add(new Vector<>()); // because of additional edge
 	}
 
-	public void connect(int u, int v, int dist){
-		G.get(u).add(new Edge(u,v,dist));
-		if(!isDirected){
-			G.get(v).add(new Edge(v,u,dist));
+	public void connect(int u, int v, int dist) {
+		G.get(u).add(new Edge(u, v, dist));
+		if (!isDirected) {
+			G.get(v).add(new Edge(v, u, dist));
 		}
 	}
 
-	public void johnsonsAlgorithm() throws Exception{
+	public void johnsonsAlgorithm() throws Exception {
 		transform();
 		int bellmanFordDist[] = bellmanFord();
 		reweight(bellmanFordDist);
@@ -63,23 +60,21 @@ public class JohnsonsAlgorithm {
 		dijkstra(bellmanFordDist);
 	}
 
-	private void removeEdge(){
+	private void removeEdge() {
 		G.remove(V);
 	}
 
-	private int[] bellmanFord() throws Exception{
-		int h[] = new int[V+1];
-		for(int i = 0 ;i < V;i++){ h[i] = INF;}
-		h[V] = 0;
-		for (int i = 0; i <= V-1; i++){ // relax V-1 times
-				for (Edge e : G.get(i)){
-					h[e.v] = Math.min(h[e.v], h[e.u] + e.dist);
-				}
+	private int[] bellmanFord() throws Exception {
+		int h[] = new int[V + 1];
+		for (int i = 0; i <= V - 1; i++) { // relax V-1 times
+			for (Edge e : G.get(i)) {
+				h[e.v] = Math.min(h[e.v], h[e.u] + e.dist);
 			}
+		}
 		// check negative cycle
-		for (int u = 0;u<V;u++){
-			for (Edge e: G.get(u)){
-				if(h[e.v] > h[e.u] + e.dist){
+		for (int u = 0; u < V; u++) {
+			for (Edge e : G.get(u)) {
+				if (h[e.v] > h[e.u] + e.dist) {
 					throw new Exception("Negative Cycle Detected.");
 				}
 			}
@@ -87,45 +82,52 @@ public class JohnsonsAlgorithm {
 		return h;
 	}
 
-	private void reweight(int bellmanDist[]){
-		for (int w = 0; w < V; w++){
-			for (Edge e : G.get(w)){
+	private void reweight(int bellmanDist[]) {
+		for (int w = 0; w < V; w++) {
+			for (Edge e : G.get(w)) {
 				e.dist = e.dist + bellmanDist[e.u] - bellmanDist[e.v];
 			}
 		}
 	}
 
-	private void transform(){
-		for(int i = 0 ; i < V;i++){
-			G.get(V).add(new Edge(V,i,0));
+	private void transform() {
+		for (int i = 0; i < V; i++) {
+			G.get(V).add(new Edge(V, i, 0));
 		}
 	}
 
-	private void dijkstra(int bellmanWeights[]){
+	private void dijkstra(int bellmanWeights[]) {
+		int dist[][] = new int[V][V];
 		for (int i = 0; i < V; i++) {
-			int dist[] = new int[V];
-			for(int q = 0 ; q< V;q++) { dist[q] = INF; }
-			dist[i] = 0;
+			for (int q = 0; q < V; q++) {
+				dist[i][q] = INF;
+			}
+			dist[i][i] = 0;
 			PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt((e) -> e.dist));
 			pq.add(new Pair(0, i));
-			while (!pq.isEmpty()){
+			while (!pq.isEmpty()) {
 				Pair vx = pq.poll();
-				if (vx.dist > dist[vx.to]) {
+				if (vx.dist > dist[i][vx.to]) {
 					continue;
 				}
 				for (Edge outgoing : G.get(vx.to)) {
-					if (dist[vx.to] + outgoing.dist < dist[outgoing.v]) {
-						dist[outgoing.v] = dist[vx.to] + outgoing.dist;
-						pq.offer(new Pair(dist[outgoing.v], outgoing.v));
+					if (dist[i][vx.to] + outgoing.dist < dist[i][outgoing.v]) {
+						dist[i][outgoing.v] = dist[i][vx.to] + outgoing.dist;
+						pq.offer(new Pair(dist[i][outgoing.v], outgoing.v));
 					}
 				}
 			}
-			for(Edge e : G.get(i)){
-					System.out.println("Distance is " + e.u +" to " + e.v + " is " + (dist[e.v] + bellmanWeights[e.v] - bellmanWeights[e.u]));
+		}
+		for (int i = 0; i < V; i++) {
+			for (int j = 0; j < V; j++) {
+				if (dist[i][j] != INF) {
+					System.out.print((dist[i][j] + bellmanWeights[j] - bellmanWeights[i]) + " ");
+				}
+				else {
+					System.out.print(INF + " ");
+				}
 			}
+			System.out.println();
 		}
 	}
-
-
-
 }
