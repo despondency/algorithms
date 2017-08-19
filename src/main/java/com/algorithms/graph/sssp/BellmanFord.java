@@ -44,7 +44,7 @@ public class BellmanFord {
 		int dist[] = new int[V];
 		for (int i = 0 ; i < V; i++) { dist[i] = INF; }
 		dist[S] = 0;
-		// relax V-1 times all V edges
+		// relax V-1 times all E edges
 		for (int i = 0; i < V - 1; i++) {
 				for (Edge e : G.get(i)) {
 					dist[e.v] = Math.min(dist[e.v], dist[e.u] + e.dist);
