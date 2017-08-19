@@ -36,3 +36,4 @@ Currently implemented algorithms
 |20  | Dijkstra                                 |     YES                                |
 |21  | DAGShortestPaths                         |     YES                                |
 |22  | BellmanFord                              |     YES                                |
+|23  | JohnsonsAlgorithm                        |     YES                                |
