@@ -42,12 +42,15 @@ public class BellmanFord {
 
 	public int[] shortestPaths() throws Exception{
 		int dist[] = new int[V];
+		for (int i = 0 ; i < V; i++) { dist[i] = INF; }
+		dist[S] = 0;
 		// relax V-1 times all V edges
 		for (int i = 0; i < V - 1; i++) {
 				for (Edge e : G.get(i)) {
 					dist[e.v] = Math.min(dist[e.v], dist[e.u] + e.dist);
 				}
-			}
+		}
+
 		// if we can relax an edge one more time, well, bad luck, we have a negative cycle
 		// which we can use to continuously exploit until the shortest path goes -INF
 		// check for negative cycle // one more pass

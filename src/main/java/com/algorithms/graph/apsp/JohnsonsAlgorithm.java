@@ -66,6 +66,8 @@ public class JohnsonsAlgorithm {
 
 	private int[] bellmanFord() throws Exception {
 		int h[] = new int[V + 1];
+		for (int i = 0 ; i <= V; i++) { h[i] = INF; }
+		h[V] = 0;
 		for (int i = 0; i <= V - 1; i++) { // relax V-1 times
 			for (Edge e : G.get(i)) {
 				h[e.v] = Math.min(h[e.v], h[e.u] + e.dist);
