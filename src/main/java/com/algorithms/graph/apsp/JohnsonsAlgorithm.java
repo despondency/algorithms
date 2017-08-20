@@ -52,12 +52,12 @@ public class JohnsonsAlgorithm {
 		}
 	}
 
-	public void johnsonsAlgorithm() throws Exception {
+	public int[][] johnsonsAPSP() throws Exception {
 		transform();
 		int bellmanFordDist[] = bellmanFord();
 		reweight(bellmanFordDist);
 		removeEdge();
-		dijkstra(bellmanFordDist);
+		return dijkstra(bellmanFordDist);
 	}
 
 	private void removeEdge() {
@@ -66,9 +66,9 @@ public class JohnsonsAlgorithm {
 
 	private int[] bellmanFord() throws Exception {
 		int h[] = new int[V + 1];
-		for (int i = 0 ; i <= V; i++) { h[i] = INF; }
+		for (int i = 0 ; i <= V; i++) { h[i] = INF; } // <=V since we added one more edge
 		h[V] = 0;
-		for (int i = 0; i <= V - 1; i++) { // relax V-1 times
+		for (int i = 0; i <= V - 1; i++) { // relax <=V-1 times since we added one more edge
 			for (Edge e : G.get(i)) {
 				h[e.v] = Math.min(h[e.v], h[e.u] + e.dist);
 			}
@@ -98,13 +98,16 @@ public class JohnsonsAlgorithm {
 		}
 	}
 
-	private void dijkstra(int bellmanWeights[]) {
+	private int[][] dijkstra(int bellmanWeights[]) {
 		int dist[][] = new int[V][V];
+		int finalDist[][] = new int[V][V];
 		for (int i = 0; i < V; i++) {
 			for (int q = 0; q < V; q++) {
 				dist[i][q] = INF;
+				finalDist[i][q] = INF;
 			}
 			dist[i][i] = 0;
+			finalDist[i][i] = 0;
 			PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt((e) -> e.dist));
 			pq.add(new Pair(0, i));
 			while (!pq.isEmpty()) {
@@ -115,21 +118,12 @@ public class JohnsonsAlgorithm {
 				for (Edge outgoing : G.get(vx.to)) {
 					if (dist[i][vx.to] + outgoing.dist < dist[i][outgoing.v]) {
 						dist[i][outgoing.v] = dist[i][vx.to] + outgoing.dist;
+						finalDist[i][outgoing.v] = dist[i][outgoing.v] + bellmanWeights[outgoing.v] - bellmanWeights[i];
 						pq.offer(new Pair(dist[i][outgoing.v], outgoing.v));
 					}
 				}
 			}
 		}
-		for (int i = 0; i < V; i++) {
-			for (int j = 0; j < V; j++) {
-				if (dist[i][j] != INF) {
-					System.out.print((dist[i][j] + bellmanWeights[j] - bellmanWeights[i]) + " ");
-				}
-				else {
-					System.out.print(INF + " ");
-				}
-			}
-			System.out.println();
-		}
+		return finalDist;
 	}
 }
