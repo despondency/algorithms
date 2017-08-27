@@ -37,3 +37,4 @@ Currently implemented algorithms
 |21  | DAGShortestPaths                         |     YES                                |
 |22  | BellmanFord                              |     YES                                |
 |23  | JohnsonsAlgorithm                        |     YES                                |
+|24  | FloydWarshall                            |     TO BE ADDED                        |
