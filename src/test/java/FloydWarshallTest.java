@@ -55,9 +55,12 @@ public class FloydWarshallTest {
 			{1000000000,1000000000,1000000000,0}
 		};
 		Assert.assertArrayEquals(expected[0], dist[0]);
-		Assert.assertArrayEquals(subArray(expected[1],1,expected[1].length), subArray(dist[1],1,dist[1].length));
-		Assert.assertArrayEquals(subArray(expected[2],2,expected[2].length), subArray(dist[2],2,dist[2].length));
-		Assert.assertArrayEquals(subArray(expected[3],3,expected[2].length), subArray(dist[3],3,dist[3].length));
+		Assert.assertEquals(expected[1][1], dist[1][1]);
+		Assert.assertEquals(expected[1][3], dist[1][3]);
+		Assert.assertEquals(expected[2][1], dist[2][1]);
+		Assert.assertEquals(expected[2][2], dist[2][2]);
+		Assert.assertEquals(expected[2][3], dist[2][3]);
+		Assert.assertEquals(expected[3][3], dist[3][3]);
 	}
 
 	@Test

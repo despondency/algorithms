@@ -1,4 +1,5 @@
 import com.algorithms.graph.components.KosarajuSharir;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class KosarajuSharirTest {
@@ -34,6 +35,7 @@ public class KosarajuSharirTest {
 		kosarajuSharir.SCC();
 		int components[] = kosarajuSharir.getComponents();
 		int szOfEachComponent[] = kosarajuSharir.getSizeOfEachComponentForId();
-		System.out.println("here");
+		Assert.assertArrayEquals(new int[]{1,0,1,1,1,1,10,12,10,5,5,5,5}, components);
+		Assert.assertArrayEquals(new int[]{1,5,0,0,0,4,0,0,0,0,2,0,1}, szOfEachComponent);
 	}
 }

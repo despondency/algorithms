@@ -55,7 +55,7 @@ public class EdmondsKarp {
 			}
 			for (int u = t; u != s; u = path[u].s){
 				path[u].f += df; // push flow
-				G.get(path[u].t).get(path[u].r).f -= df; // reduce backwards flow
+				G.get(path[u].t).get(path[u].r).f -= df; // reduce flow
 			}
 			flow += df;
 		}
