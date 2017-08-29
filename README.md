@@ -38,3 +38,5 @@ Currently implemented algorithms
 |22  | BellmanFord                              |     YES                                |
 |23  | JohnsonsAlgorithm                        |     YES                                |
 |24  | FloydWarshall                            |     TO BE ADDED                        |
+|25  | EdmondsKarp                              |     YES                                |
+|26  | SuffixArray                              |     TO BE ADDED                        |
