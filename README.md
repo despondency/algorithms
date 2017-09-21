@@ -40,3 +40,4 @@ Currently implemented algorithms
 |24  | FloydWarshall                            |     TO BE ADDED                        |
 |25  | EdmondsKarp                              |     YES                                |
 |26  | SuffixArray                              |     TO BE ADDED                        |
+|27  | KMP                                      |     YES                                |
