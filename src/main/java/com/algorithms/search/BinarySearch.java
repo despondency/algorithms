@@ -9,7 +9,7 @@ public class BinarySearch {
 	}
 
 	public int equalBound(int n) {
-		int hi = A.length;
+		int hi = A.length - 1;
 		int lo = 0;
 		while (hi >= lo) {
 			int mid = lo + ((hi - lo) / 2);
